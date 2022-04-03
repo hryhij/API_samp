@@ -14,4 +14,10 @@ router.get('/getGroups', function(req, res, next) {
   })
 });
 
+router.get('/getGroups_HYBE', function(req, res, next) {
+  sql.getGroups_HYBE().then((result)=>{
+    res.json(result[0])
+  })
+});
+
 module.exports = router;
